@@ -1,0 +1,8 @@
+Package: KRmisc
+Type: Package
+Title: Kornel's Miscellaneous R Functions
+Version: 0.1
+Author: Kornelius Rohmeyer
+Maintainer: Kornelius Rohmeyer <rohmeyer@small-projects.de>
+Description: Kornel's Miscellaneous R Functions
+License: GPL (>= 2)
