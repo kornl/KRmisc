@@ -11,7 +11,7 @@ dputMatrix <- function(m, name, indent=6, rowNames=FALSE) {
         s <- paste(s, 
                    ifelse(i==1,"",paste(rep(" ",indent),collapse="")),
                    rName,
-                   dput2(unname(m[i,])),
+                   dputS(unname(m[i,])),
                    ifelse(i==dim(m)[1],")\n",",\n"),
                    sep="")            
     }
@@ -21,11 +21,11 @@ dputMatrix <- function(m, name, indent=6, rowNames=FALSE) {
             return(s)
         }
         s <- paste(s, 
-                   "row.names(",name,") <- ", dput2(row.names(m)), "\n", sep="")
+                   "row.names(",name,") <- ", dputS(row.names(m)), "\n", sep="")
     }
     return(s)
 }
 
 dputS <- function(x) {
-    paste(capture.output(dput(x)), collapse=" ")
+    paste(capture.output(dput(x)), collapse="\n")
 }
